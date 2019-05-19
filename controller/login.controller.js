@@ -7,8 +7,8 @@
            
             if($scope.username == 'admin' && $scope.password =='admin'){
                 
-                $window.location.href = '/#!/green';
-
+                $window.location.href = '/#!/test';
+ 
             }
             else {
             $scope.loginError=true;    

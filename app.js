@@ -1,18 +1,23 @@
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("myApp", ["ngRoute", "ngMaterial", "ngAnimate","ngAria"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "views/main.html"
+        templateUrl : "views/home.html",
+        controller : 'homeController',
     })
     .when("/login", {
         templateUrl : "views/login.html",
         controller: 'loginController',
     })
-    .when("/green", {
-        templateUrl : "views/green.html"
+    .when("/home", {
+        templateUrl : "views/home.html",
+        controller : 'homeController',
     })
     .when("/registration", {
         templateUrl : "views/registration.html",
         controller: "registrationController",
+    })
+    .when("/test", {
+        templateUrl : "views/test.html"
     });
 });
