@@ -7,7 +7,7 @@
            
             if($scope.username == 'admin' && $scope.password =='admin'){
                 
-                $window.location.href = '/#!/test';
+                $window.location.href = '/#!/home';
  
             }
             else {
