@@ -2,8 +2,8 @@ var app = angular.module("myApp", ["ngRoute", "ngMaterial", "ngAnimate","ngAria"
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "views/home.html",
-        controller : 'homeController',
+        templateUrl : "views/login.html",
+        controller: 'loginController',
     })
     .when("/login", {
         templateUrl : "views/login.html",
@@ -17,7 +17,8 @@ app.config(function($routeProvider) {
         templateUrl : "views/registration.html",
         controller: "registrationController",
     })
-    .when("/test", {
-        templateUrl : "views/test.html"
+    .when("/cart", {
+        templateUrl : "views/cart.html",
+        controller: "cartController",
     });
 });

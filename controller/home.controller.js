@@ -24,10 +24,19 @@
         data={
           "name" : name
         }
-        $http.delete("http://127.0.0.1:3030/api/releases/notes", data).then(
+        $http.post("http://127.0.0.1:3030/api/releases/remove", data).then(
                 function successCallback(response) {
                   console.log("Successfully POST-ed data");
                   //$window.location.href = '/#!/login';
+                  $http.get("http://127.0.0.1:3030/api/releases/notes").then(
+                    function successCallback(response) {
+                      $scope.response = response;
+                      $scope.items = response.data;
+                    },
+                    function errorCallback(response) {
+                      console.log("Unable to perform get request");
+                    }
+                  );
                 },
                 function errorCallback(response) {
                   console.log("POST-ing of data failed");
@@ -54,7 +63,16 @@
                 $http.post("http://127.0.0.1:3030/api/releases/notes", temp).then(
                 function successCallback(response) {
                   console.log("Successfully POST-ed data");
-                  $scope.$apply();
+                  
+                $http.get("http://127.0.0.1:3030/api/releases/notes").then(
+                  function successCallback(response) {
+                    $scope.response = response;
+                    $scope.items = response.data;
+                  },
+                  function errorCallback(response) {
+                    console.log("Unable to perform get request");
+                  }
+                );
                 },
                 function errorCallback(response) {
                   console.log("POST-ing of data failed");

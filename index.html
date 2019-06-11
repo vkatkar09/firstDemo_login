@@ -11,24 +11,22 @@
 <script src="controller/login.controller.js"></script>
 <script src="controller/registration.controller.js"></script>
 <script src="controller/home.controller.js"></script>
+<script src="controller/cart.controller.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"></link>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"></link>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
 
+
 <body ng-app="myApp" style="background-color:#F0F0F0">
 
-<!-- <p><a href="#/!">Main</a></p>
-<a href="#!login">Login</a>
-<a href="#!registration">Register</a> -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">MyToDo</a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-       -->
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -40,7 +38,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#!registration">Register</a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="#!cart">Cart</a>
+            </li>
           </ul>
           <form style="float:right; padding-top: 15px" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
